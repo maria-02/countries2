@@ -1,0 +1,7 @@
+<button 
+    [class]="'button button-'+type"
+    (click)="click($event)"
+>   
+    <img *ngIf="icon" [src]="'../../../assets/icons/'+icon+'_24dp.svg'">
+    {{title | uppercase }}
+</button>

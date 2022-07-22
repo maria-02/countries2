@@ -1,0 +1,9 @@
+<mat-grid-list class="cards-container" cols="3" rowHeight="420px">
+
+    <mat-grid-tile *ngFor="let country of countries">
+      <app-country-card  
+      [country]="country"
+      ></app-country-card>
+    </mat-grid-tile>
+  
+  </mat-grid-list>

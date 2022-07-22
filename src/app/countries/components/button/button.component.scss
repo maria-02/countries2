@@ -1,0 +1,41 @@
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background:none;
+    padding:12px 8px;
+    border-radius:5px;
+    font-weight: 600;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    &.button-primary{
+        background-color:#7e22ce;
+        color:#fff;
+    }
+    &.button-secondary{
+        border: 1px solid #7e22ce;
+        background-color: #fff;
+        color:#7e22ce;
+    }
+
+    &.button-success{
+        background-color: #16a34a;
+        color:#fff;
+    }
+
+    &:hover{
+        filter:brightness(0.9);
+    }
+
+    &:active{
+        transform: scale(0.95);
+        filter:brightness(1.1);          
+    }
+
+    img{
+        transform: translateX(-2px);
+    }
+}
