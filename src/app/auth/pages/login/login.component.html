@@ -1,25 +1,29 @@
-<mat-grid-list cols="1">
-    <mat-grid-tile>
-        <mat-card>
-            <mat-card-title>Welcome to countries</mat-card-title>
-            <mat-card-subtitle>Please login</mat-card-subtitle>
+<div class="login-container">
 
-            <mat-form-field appearance="fill">
-                <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="pat@example.com" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-            </mat-form-field>
+    <mat-card class="mat-card-container">
+        <mat-card-title class="title">Bienvenido a NgCountries</mat-card-title>
+        <mat-card-subtitle>Por favor completa los campos necesario para loguearte</mat-card-subtitle>
 
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage('email')}}</mat-error>
+        </mat-form-field>
 
-
-
-
-
-
-            <button mat-raised-button>
-                Login
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
-        </mat-card>
-    </mat-grid-tile>
+            <mat-error *ngIf="password.invalid">{{getErrorMessage('password')}}</mat-error>
+        </mat-form-field>
 
-</mat-grid-list>
+
+        <button class="submit" mat-raised-button (click)="login()">
+            Login
+        </button>
+    </mat-card>
+
+</div>
