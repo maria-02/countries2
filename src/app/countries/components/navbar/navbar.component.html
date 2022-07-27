@@ -1,13 +1,48 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #sidenav style="width:200px">
+
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()" style="margin-left:auto">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a routerLink="./home" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon color="primary">home</mat-icon>
+        <span>Home</span>
+      </a>
+      <a routerLink="./about" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon color="primary">info</mat-icon>
+        <span>About</span>
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+      (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <span>{{ title | titlecase }}</span>
     <span class="flex-spacer"></span>
+    <mat-chip-list>
+      <mat-chip color="accent" selected>
+        <img matChipAvatar
+          src="https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Usuario" />
+        Mary
+      </mat-chip>
+    </mat-chip-list>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-</mat-toolbar>
+
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+</mat-sidenav-container>

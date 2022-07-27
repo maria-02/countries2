@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CountryCardComponent } from './components/country-card/country-card.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CountriesListComponent } from './components/countries-list/countries-list.component';
+import { MainComponent } from './pages/main/main.component';
 
 
 
@@ -19,6 +20,7 @@ import { CountriesListComponent } from './components/countries-list/countries-li
     CountryCardComponent,
     ButtonComponent,
     CountriesListComponent,
+    MainComponent,
   ],
   imports: [
     CommonModule,
