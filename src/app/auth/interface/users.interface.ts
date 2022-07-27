@@ -1,3 +1,1 @@
-interface User {
-    
-}
+interface User {}

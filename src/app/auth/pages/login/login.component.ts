@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
     Validators.minLength(6),
   ]); // segundo parámetro es las cosas que quiero validar
 
-  constructor(private authService) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {}
 
