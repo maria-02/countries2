@@ -24,6 +24,7 @@
         <button class="submit" mat-raised-button (click)="login()">
             Login
         </button>
+        <div *ngIf="errorExists">Error en el login</div>
     </mat-card>
 
 </div>

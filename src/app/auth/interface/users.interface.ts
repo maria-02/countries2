@@ -11,3 +11,8 @@ export interface DataLogin {
   email: string;
   password: string;
 }
+
+export interface LoginResp {
+  ok: boolean;
+  user: User;
+}
