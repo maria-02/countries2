@@ -1,18 +1,18 @@
 <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>{{ country.name.common | titlecase }}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="country.flags.png" [alt]="'Imagen de la bandera de ' + country.name.common">
-    <mat-card-content>
-      <p>Poplación: 
-        {{country.population}}
-      </p>
-      <p>Región: 
-        {{country.region}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
+  <mat-card-header>
+    <mat-card-title>{{ country.name.common | titlecase }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="country.flags.png" [alt]="'Imagen de la bandera de ' + country.name.common">
+  <mat-card-content>
+    <p>Poplación:
+      {{country.population}}
+    </p>
+    <p>Región:
+      {{country.region}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button (click)="goTo(country.name.common)">SEE MORE</button>
+  </mat-card-actions>
 </mat-card>

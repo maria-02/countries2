@@ -9,6 +9,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
@@ -24,6 +25,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatFormFieldModule,
     MatIconModule,
     MatGridListModule,
+    MatProgressSpinnerModule,
     MatSliderModule,
     MatToolbarModule,
     MatButtonModule,

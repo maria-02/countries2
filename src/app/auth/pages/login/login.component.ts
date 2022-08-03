@@ -56,8 +56,9 @@ export class LoginComponent implements OnInit {
       .subscribe({
         next: (resp) => {
           console.log(resp);
-          this.errorExists = false;
           this.authService.setAuth(resp);
+          this.errorExists = false;
+          this.authService.saveLogin(resp);
           this.router.navigate(['/countries/home']);
         }, //la función que se ejecuta cuando subscribe da ok
         error: (e) => {

@@ -1,28 +1,14 @@
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  CanActivate,
-  CanLoad,
-  Route,
-  Router,
-  RouterStateSnapshot,
-  UrlSegment,
-  UrlTree,
-} from '@angular/router';
+import { CanLoad, Route, Router, UrlSegment, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanLoad {
+export class AppGuard implements CanLoad {
   constructor(private authService: AuthService, private router: Router) {}
 
-  // canActivate(
-  //   route: ActivatedRouteSnapshot,
-  //   state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-  //   return true;
-  // }
   canLoad(
     route: Route,
     segments: UrlSegment[]
@@ -32,10 +18,10 @@ export class AuthGuard implements CanLoad {
     | boolean
     | UrlTree {
     if (this.authService.getLocalStorage('login')) {
-      return true;
-    } else {
-      this.router.navigate(['auth/login']);
+      this.router.navigate(['/countries/home']);
       return false;
+    } else {
+      return true;
     }
   }
 }

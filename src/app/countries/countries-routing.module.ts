@@ -14,7 +14,7 @@ const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'detail',
+        path: 'detail/:name', //los : indican que el valor será dinámico (params)
         component: DetailComponent,
       },
       {

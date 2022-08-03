@@ -31,15 +31,14 @@
     <span class="flex-spacer"></span>
     <mat-chip-list>
       <mat-chip color="accent" selected>
-        <img matChipAvatar
-          src="https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Usuario" />
-        Mary
+        <img matChipAvatar [src]="login.user.avatar" alt="Usuario" />
+        {{login.user.fname | titlecase}} {{login.user.lname | titlecase}}
       </mat-chip>
     </mat-chip-list>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
     </button>
+    <button mat-button (click)="logOut()">Logout</button>
 
   </mat-toolbar>
 

@@ -1,4 +1,8 @@
-.cards-container{
-    margin: 60px auto;
-    max-width: 1200px;
+.cards-container {
+  margin: 60px auto;
+  max-width: 1200px;
+
+  &__spinner {
+    margin: 30% auto;
+  }
 }
