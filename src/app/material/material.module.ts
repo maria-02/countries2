@@ -11,6 +11,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
+
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 
@@ -27,6 +30,8 @@ import { MatChipsModule } from '@angular/material/chips';
     MatGridListModule,
     MatProgressSpinnerModule,
     MatSliderModule,
+    MatTabsModule,
+    MatTableModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,

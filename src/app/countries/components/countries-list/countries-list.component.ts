@@ -12,6 +12,8 @@ export class CountriesListComponent implements OnInit {
 
   constructor(private countriesService: CountriesService) {}
 
+  displayedColumns: string[] = ['name', 'capital', 'region', 'languages'];
+
   ngOnInit(): void {
     this.getCountriesFromService();
   }
@@ -21,5 +23,10 @@ export class CountriesListComponent implements OnInit {
       this.countries = resp;
       this.loader = false;
     });
+  }
+
+  getValuesFromObject(obj: any) {
+    console.log(obj);
+    return obj ? Object.values(obj) : '-';
   }
 }

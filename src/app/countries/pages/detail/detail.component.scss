@@ -1,0 +1,22 @@
+.cards-container {
+  margin: 45rem auto;
+  max-width: 900rem;
+  &__spinner {
+    margin: 30% auto;
+  }
+}
+
+table {
+  width: 90%;
+  max-width: 900rem;
+  min-width: 200rem;
+  margin: 20rem auto;
+}
+
+.mat-column-name {
+  width: 300px;
+}
+
+.mat-column-region {
+  width: 300px;
+}
