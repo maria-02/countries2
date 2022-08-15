@@ -26,6 +26,7 @@ export class CountriesListComponent implements OnInit {
   }
 
   getValuesFromObject(obj: any) {
+    //para la tabla
     console.log(obj);
     return obj ? Object.values(obj) : '-';
   }

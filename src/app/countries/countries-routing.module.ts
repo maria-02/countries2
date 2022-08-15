@@ -19,7 +19,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'home', //TODO: poner 404
+        redirectTo: 'home',
       },
     ],
   },
